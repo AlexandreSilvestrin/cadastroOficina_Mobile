@@ -1,0 +1,43 @@
+<AjustesPage>:
+    GridLayout:
+        rows: 3
+        columns: 1
+        BoxLayout:
+            canvas:
+                Color:
+                    rgba: 0, 0, 1, 0.1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            LabelButton:
+                text: "ajuste"
+                on_release: print("ai")
+        BoxLayout:
+            canvas:
+                Color:
+                    rgba: 0, 0, 1, 0.1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            LabelButton:
+                text: "ajuste"
+                on_release: print("ai")
+        BoxLayout:
+            canvas:
+                Color:
+                    rgba: 0, 0, 1, 0.1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            LabelButton:
+                text: "ajuste"
+                on_release: print("ai")
+    BoxLayout:
+        orientation: "horizontal"
+        spacing: 10
+        size_hint_y: None
+        height: 50
+
+        Button:
+            text: 'Voltar'
+            on_release: app.mudar_tela("cadastro", 'Cadastro de Clientes')

@@ -1,0 +1,46 @@
+#:include kv/cadastro.kv
+#:include kv/ajustespage.kv
+#:include kv/pesquisar.kv
+
+GridLayout:
+    rows: 2
+    canvas:
+        Color:
+            rgba: 0.13, 0.14, 0.17, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    FloatLayout:
+        pos_hint: {'right': 0.9, 'top': 1}
+        size_hint: 0.2, 0.1
+        Label:
+            id: titulo
+            pos_hint: {'right': 1, 'top': 1}
+            text: "Cadastros de Clientes"
+            font_size: 22
+            size_hint_y: None
+            height: 40
+            color: 0.82, 0.82, 0.82, 1
+            canvas.before:
+                Color:
+                    rgba: 0.16, 0.17, 0.2, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        ImageButton:
+            pos_hint: {'right': 1, 'top': 0.95}
+            size_hint: 0.1, 0.6
+            source: "icon/engrenagem.png"
+            on_release: app.mudar_tela('ajustespage', 'Ajustes')
+
+    ScreenManager:
+        id: screen_manager
+        Cadastro:
+            name: "cadastro"
+            id: cadastro
+        AjustesPage:
+            name: "ajustespage"
+            id: ajuestepage
+        Pesquisar:
+            name: "pesquisar"
+            id: pesquisar

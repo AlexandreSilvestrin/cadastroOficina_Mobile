@@ -1,0 +1,150 @@
+<Cadastro>:
+    GridLayout:
+        rows: 7
+        columns: 1
+        spacing: 12
+
+        canvas.before:
+            Color:
+                rgba: 0.13, 0.14, 0.17, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 50
+
+            Label:
+                text: "Nome:"
+                font_size: 16
+                size_hint_x: None
+                width: 70
+                color: 0.82, 0.82, 0.82, 1
+                halign: "right"
+
+            TextInput:
+                id: nometxt
+                font_size: 16
+                size_hint_x: 1
+                background_color: 0.23, 0.25, 0.3, 1
+                foreground_color: 0.82, 0.82, 0.82, 1
+                cursor_color: 0.82, 0.82, 0.82, 1
+                cursor_width: 2
+                border: (2, 2, 2, 2)
+                border_radius: [15]
+                padding: [10, 5]
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 50
+
+            Label:
+                text: "Telefone:"
+                font_size: 16
+                size_hint_x: None
+                width: 70
+                color: 0.82, 0.82, 0.82, 1
+                halign: "right"
+
+            TextInput:
+                id: telltxt
+                font_size: 16
+                size_hint_x: 1
+                background_color: 0.23, 0.25, 0.3, 1
+                foreground_color: 0.82, 0.82, 0.82, 1
+                cursor_color: 0.82, 0.82, 0.82, 1
+                cursor_width: 2
+                border: (2, 2, 2, 2)
+                border_radius: [15]
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 50
+
+            Label:
+                text: "Placa:"
+                font_size: 16
+                size_hint_x: None
+                width: 70
+                color: 0.82, 0.82, 0.82, 1
+                halign: "right"
+
+            TextInput:
+                id: placatxt
+                font_size: 16
+                size_hint_x: 1
+                background_color: 0.23, 0.25, 0.3, 1
+                foreground_color: 0.82, 0.82, 0.82, 1
+                cursor_color: 0.82, 0.82, 0.82, 1
+                cursor_width: 2
+                border: (2, 2, 2, 2)
+                border_radius: [15]
+                padding: [10, 5]
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 50
+
+            Label:
+                text: "Carro:"
+                font_size: 16
+                size_hint_x: None
+                width: 70
+                color: 0.82, 0.82, 0.82, 1
+                halign: "right"
+
+            TextInput:
+                id: carrotxt
+                font_size: 16
+                size_hint_x: 1
+                background_color: 0.23, 0.25, 0.3, 1
+                foreground_color: 0.82, 0.82, 0.82, 1
+                cursor_color: 0.82, 0.82, 0.82, 1
+                cursor_width: 2
+                border: (2, 2, 2, 2)
+                border_radius: [15]
+                padding: [10, 5]
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 220
+
+            Label:
+                text: "Info:"
+                font_size: 16
+                size_hint_x: None
+                width: 70
+                color: 0.82, 0.82, 0.82, 1
+                halign: "right"
+
+            TextInput:
+                id: infotxt
+                font_size: 16
+                size_hint_x: 1
+                background_color: 0.23, 0.25, 0.3, 1
+                foreground_color: 0.82, 0.82, 0.82, 1
+                cursor_color: 0.82, 0.82, 0.82, 1
+                cursor_width: 2
+                border: (2, 4, 4, 2)
+                border_radius: [15]
+                padding: [10, 5]
+
+    BoxLayout:
+        orientation: "horizontal"
+        spacing: 10
+        size_hint_y: None
+        height: 50
+
+        Button:
+            text: 'Pesquisar'
+            on_release: app.pesquisar_dados()
+
+        Button:
+            text: 'Salvar'
+            on_release: app.salvar('cadastro')
